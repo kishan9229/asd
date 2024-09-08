@@ -1,0 +1,188 @@
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('C:/kishan/frontend/company_web/ranuak/image.jpg');
+}
+
+.hero-section {
+    background-image: url('C:/kishan/frontend/company_web/ranuak/image.png'); /* Fixed path syntax */
+    
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#hero-video {
+    
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.featured-listings-section {
+    padding: 50px 0;
+}
+
+.featured-listings-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    color: white; /* Changed from text-color to color */
+}
+.container {
+    background-image: url('C:/kishan/frontend/company_web/ranuak/image.jpg'); /* Fixed path syntax */
+    text-align: center;
+    color: #f9f9f9;
+}
+.testimonials-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section form input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.contact-section form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    background-image: ;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chatbot-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#chatbot {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#chatbot-header h3 {
+    margin: 0;
+}
+
+#close-chatbot {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+#nav-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}

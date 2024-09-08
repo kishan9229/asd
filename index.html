@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 9229 Real Estate Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav id="nav-bar" style="background-color: #007bff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+        <button id="nav-toggle" onclick="toggleNavBar()" style="background-color: transparent; border: none; color: white; font-size: 24px; cursor: pointer;"><span>&#8230;</span></button>
+        <ul style="list-style-type: none; display: flex; margin: 0; padding: 0;">
+            <li style="margin-right: 20px;"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+            <li style="margin-right: 20px;"><a href="#featured-listings" style="color: white; text-decoration: none;">Featured Listings</a></li>
+            <li style="margin-right: 20px;"><a href="#properties" style="color: white; text-decoration: none;">Properties</a></li>
+            <li style="margin-right: 20px;"><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Team 9229</h1>
+            <p>Explore our exclusive collection of properties</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by location, type, or price">
+                <button>Search</button>
+            </div>
+            <div class="search-video-space" style="height: 50px;"></div>
+        </div>
+        <video autoplay muted loop id="hero-video">
+            <source src="C:\kishan\frontend\company_web\ranuak\video.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section id="featured-listings" class="featured-listings-section">
+        <div class="container">
+            <h2>Featured Listings</h2>
+            <div class="properties-grid">
+                <!-- Properties will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings Section -->
+    <section id="properties" class="properties-section">
+        <div class="container">
+            <h2>Properties</h2>
+            <div class="filter-bar">
+                <select name="price" id="price-filter">
+                    <option value="">Price</option>
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
+                <select name="size" id="size-filter">
+                    <option value="">Size</option>
+                    <option value="small-to-large">Small to Large</option>
+                    <option value="large-to-small">Large to Small</option>
+                </select>
+                <select name="location" id="location-filter">
+                    <option value="">Location</option>
+                    <!-- Locations will be dynamically loaded here -->
+                </select>
+                <select name="amenities" id="amenities-filter">
+                    <option value="">Amenities</option>
+                    <!-- Amenities will be dynamically loaded here -->
+                </select>
+            </div>
+            <div class="properties-grid">
+                <!-- Properties will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script>
+        // Get the form and button elements
+        const form = document.querySelector('form');
+        const button = document.querySelector('button');
+
+        // Add an event listener to the form submission
+        form.addEventListener('submit', (e) => {
+            // Prevent the default form submission behavior
+            e.preventDefault();
+
+            // Get the input values
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const message = document.querySelector('textarea').value;
+
+            // Send the email using EmailJS (assuming you have EmailJS set up)
+            const templateParams = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            emailjs.send('service_id', 'template_id', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email. Please try again.');
+                });
+        });
+    </script>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="">
+            <p>&copy; 2024 Team 9229. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container">
+        <a href="https://wa.me/919682959229?text=we+are+intrested+in+property"><button id="chatbot-button">Chat with Us</button></a>
+        <div id="chatbot">
+            <div id="chatbot-header">
+                <h3>Customer Support</h3>
+                <button id="close-chatbot">Close</button>
+            </div>
+            <div id="chatbot-body">
+                <!-- Chatbot functionality will be implemented here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
